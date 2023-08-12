@@ -50,6 +50,50 @@ body{
         }
 
     }
+    .sidebar-btn{
+        height: 28px;
+        width: 35px;
+        // background-color: red;
+        position: relative;
+        .bar{
+            border-radius: 3px;
+            height: 6px;
+            width: 100%;
+            background-color: var(--text-color);
+            position: absolute;
+            transition: 100ms ease-in-out;
+            &:nth-child(1){
+                top: 0;
+            }
+            &:nth-child(2){
+                top: 50%;
+                transform-origin: right;
+                transform:scaleX(.8) translateY(-50%);
+            }
+            &:nth-child(3){
+                top: 100%;
+                transform: scaleX(1.1) translateY(-100%);
+                transform-origin: right;
+            }
+        }
+        &.active{
+            .bar{
+                transform-origin: center;
+                top: 50%;
+                &:nth-child(1){
+                    transform:translate(0,-50%) scale(1) rotate(45deg) ;
+                }
+                &:nth-child(2){
+                    transform: scaleX(0) translateY(-50%);
+                    // display: none;
+                }
+                &:nth-child(3){
+                    transform:translate(0,-50%) scale(1) rotate(-45deg);
+                }
+            }
+        }
+        
+    }
 }
 
 .container{
