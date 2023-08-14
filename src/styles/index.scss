@@ -50,6 +50,7 @@ body{
         }
 
     }
+  
     .sidebar-btn{
         height: 28px;
         width: 35px;
@@ -93,6 +94,37 @@ body{
             }
         }
         
+    }
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 250px;
+    box-shadow: 0 0 0 100vw rgba(0,0,0,0.2),
+    3px 0 5px var(--shadow-color);
+
+    .sidebar-link{
+        display: block;
+        padding: .5em 1em;
+        border-left: .4em solid transparent;
+        margin-bottom: 1em;
+        color: var(--text-color);
+        font-size: 1.1em;
+        transition: .2s ease-in;
+        &.active{
+            border-left-color: var(--primary-color);
+        }
+        &:hover{
+            border-left-color: var(--primary-color);
+            background-color: var(--shadow-color);
+        }
+        svg{
+            width: 1.2em;
+            margin-right: .5em;
+        }
     }
 }
 
